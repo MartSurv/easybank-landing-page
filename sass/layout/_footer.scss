@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    position: relative;
+    @include flexCol;
+    justify-content: center;
+    height: 200px;
+    background-color: $dark-blue;
+    padding: 0 15rem;
+
+    &__container {
+        @include flexRow;
+        justify-content: start;
+        height: 100px;
+        width: 100%;
+    }
+
+    &__logo-box {
+        @include flexCol;
+        align-items: flex-start;
+        height: 100%;
+        width: 15%;
+    }
+
+    &__icons {
+        width: 100%;
+        @include flexRow;
+    }
+
+    &__nav {
+        @include flexRow;
+        height: 100%;
+        width: 27%;
+        margin-left: 12rem;
+    }
+
+    &__list {
+        list-style: none;
+        font-size: 1.6rem;
+        line-height: 2;
+        color: $grayish-blue;
+    }
+
+    &__rights {
+        @include flexCol;
+        height: 100%;
+        width: 42%;
+        align-items: flex-end;
+        margin-left: auto;
+
+        & p {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    color: $grayish-blue;
+
+    & a,
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: $white;
+    }
+}

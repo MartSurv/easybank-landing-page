@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+    @include flexRow;
+    background-color: $very-light-gray;
+    height: 90vh;
+    position: relative;
+
+    &__text-box {
+        @include flexCol;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        width: 40%;
+        padding-left: 20rem;
+    }
+
+    &__img-box {
+        position: relative;
+        height: 100%;
+        width: 60%;
+        overflow: hidden;
+    }
+
+    &__img-background {
+        position: absolute;
+        top: -180px;
+        right: -380px;
+    }
+
+    &__img-mockup {
+        position: absolute;
+        top: -50px;
+        right: -120px;
+        object-fit: contain;
+    }
+}

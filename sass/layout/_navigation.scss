@@ -1,0 +1,35 @@
+.navigation {
+    @include flexRow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 12vh;
+    width: 100%;
+    background-color: $white;
+    padding: 0 20rem;
+    padding-right: 17rem;
+    z-index: 10;
+
+    &__logo-box {
+        display: inline-block;
+    }
+
+    &__logo {}
+
+    &__nav {}
+
+    &__list {
+        list-style: none;
+        color: $grayish-blue;
+    }
+
+    &__item {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 300;
+
+        &:not(:first-of-type) {
+            margin-left: 2.5rem;
+        }
+    }
+}

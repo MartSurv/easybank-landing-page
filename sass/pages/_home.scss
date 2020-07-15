@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.container {
+    margin-bottom: 5rem;
+    width: 55%;
+}
+
+.section-features {
+    @include flexCol;
+    align-items: flex-start;
+    background-color: $light-grayish-blue;
+    width: 100%;
+    padding: 12rem 18rem;
+    padding-right: 12rem;
+}
+
+.features {
+
+    &__feature {
+        @include flexCol;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__icon {
+        margin-bottom: 4rem;
+    }
+}
+
+.section-articles {
+    @include flexCol;
+    align-items: flex-start;
+    background-color: $very-light-gray;
+    width: 100%;
+    padding: 12rem 18rem;
+    padding-right: 12rem;
+}
+
+
+.articles {
+
+    &__article {
+        @include flexCol;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: $white;
+        border-radius: 10px;
+        overflow: hidden;
+
+        & figure {
+
+            & img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 3rem;
+            }
+
+            & figcaption {
+                color: $grayish-blue;
+                margin-left: 3rem;
+            }
+        }
+
+        & article {
+            padding: 2rem 3rem;
+            padding-right: 2rem;
+        }
+    }
+}
