@@ -7,13 +7,26 @@
     width: 55%;
 }
 
-.section-features {
+.section {
     @include flexCol;
     align-items: flex-start;
     background-color: $light-grayish-blue;
     width: 100%;
     padding: 12rem 18rem;
-    padding-right: 12rem;
+
+    @include respond(desktop) {
+        padding: 8rem 14rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 6rem 12rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 4rem 10rem;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 .features {
@@ -22,6 +35,10 @@
         @include flexCol;
         justify-content: flex-start;
         align-items: flex-start;
+
+        @include respond(tab-port) {
+            align-items: center;
+        }
     }
 
     &__icon {
@@ -29,22 +46,12 @@
     }
 }
 
-.section-articles {
-    @include flexCol;
-    align-items: flex-start;
-    background-color: $very-light-gray;
-    width: 100%;
-    padding: 12rem 18rem;
-    padding-right: 12rem;
-}
-
-
 .articles {
 
     &__article {
         @include flexCol;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: stretch;
         background-color: $white;
         border-radius: 10px;
         overflow: hidden;
@@ -56,6 +63,10 @@
                 height: 200px;
                 object-fit: cover;
                 margin-bottom: 3rem;
+
+                @include respond(tab-land) {
+                    height: 150px;
+                }
             }
 
             & figcaption {
@@ -65,6 +76,7 @@
         }
 
         & article {
+            height: 100%;
             padding: 2rem 3rem;
             padding-right: 2rem;
         }

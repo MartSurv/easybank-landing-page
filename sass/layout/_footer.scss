@@ -10,6 +10,14 @@
     background-color: $dark-blue;
     padding: 0 15rem;
 
+    @include respond(tab-land) {
+        padding: 0 12rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 0 10rem;
+    }
+
     &__container {
         @include flexRow;
         justify-content: start;
@@ -27,12 +35,16 @@
     &__icons {
         width: 100%;
         @include flexRow;
+
+        & a:hover path {
+            fill: $lime-green;
+        }
     }
 
     &__nav {
         @include flexRow;
         height: 100%;
-        width: 27%;
+        width: 30%;
         margin-left: 12rem;
     }
 
@@ -40,29 +52,40 @@
         list-style: none;
         font-size: 1.6rem;
         line-height: 2;
-        color: $grayish-blue;
+
+        & a,
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: $grayish-blue;
+
+            &:hover {
+                @include gradientText;
+            }
+        }
     }
 
     &__rights {
         @include flexCol;
         height: 100%;
-        width: 42%;
+        width: 45%;
+        justify-content: center;
         align-items: flex-end;
         margin-left: auto;
 
         & p {
             font-size: 1.6rem;
-            margin-top: 2rem;
+            margin: 2rem 0;
         }
     }
 }
 
 .attribution {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.4rem;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 1.2rem;
     color: $grayish-blue;
 
     & a,
@@ -70,5 +93,9 @@
     a:visited {
         text-decoration: none;
         color: $white;
+
+        &:hover {
+            @include gradientText;
+        }
     }
 }

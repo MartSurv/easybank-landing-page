@@ -20,10 +20,16 @@
 }
 
 .heading-quaternary {
+    display: inline-block;
     color: $dark-blue;
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    backface-visibility: hidden;
+
+    &:hover {
+        @include gradientText;
+    }
 }
 
 .paragraph {

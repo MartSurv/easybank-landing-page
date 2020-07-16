@@ -10,6 +10,11 @@
         font-size: 1.6rem;
         font-weight: 700;
         color: $white;
-        background: linear-gradient(90deg, $lime-green 0%, $bright-cyan 100%);
+        background: $default-gradient;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: .6;
+        }
     }
 }

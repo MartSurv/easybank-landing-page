@@ -7,3 +7,11 @@
   content: '';
   display: table;
 }
+
+.u-text-gradient {
+  display: inline-block;
+  background-image: $default-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

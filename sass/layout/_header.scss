@@ -5,35 +5,87 @@
 .header {
     @include flexRow;
     background-color: $very-light-gray;
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 100vw;
+    }
 
     &__text-box {
         @include flexCol;
         justify-content: center;
         align-items: flex-start;
         height: 100%;
-        width: 40%;
+        width: 50%;
+        padding-right: 6rem;
         padding-left: 20rem;
+
+        @include respond(desktop) {
+            padding-left: 10rem;
+        }
+
+        @include respond(tab-land) {
+            padding-left: 8rem;
+        }
+
+        @include respond (tab-port) {
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: 50%;
+        }
     }
 
     &__img-box {
         position: relative;
         height: 100%;
-        width: 60%;
+        width: 50%;
         overflow: hidden;
+
+        @include respond (tab-port) {
+            width: 100%;
+            height: 40%;
+        }
     }
 
     &__img-background {
         position: absolute;
-        top: -180px;
-        right: -380px;
+        top: -100px;
+        right: -100px;
+        width: 120%;
+        object-fit: contain;
+
+        @include respond (tab-land) {
+            top: -40px;
+            right: -70px;
+        }
+
+        @include respond (tab-port) {
+            top: -50px;
+            right: 50%;
+            transform: translateX(50%);
+        }
     }
 
     &__img-mockup {
         position: absolute;
         top: -50px;
         right: -120px;
+        width: 50%;
         object-fit: contain;
+
+        @include respond (tab-land) {
+            top: 0;
+        }
+
+        @include respond (tab-port) {
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }

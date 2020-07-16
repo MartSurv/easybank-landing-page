@@ -12,5 +12,7 @@ $light-grayish-blue: hsl(220, 16%, 96%);
 $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
+$default-gradient: linear-gradient(90deg, $lime-green 0%, $bright-cyan 100%);
+$dark-blue-gradient: linear-gradient(90deg, $dark-blue 0%, $dark-blue 100%);
 //Default font size
 $default-font-size: 1.8rem;
