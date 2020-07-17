@@ -12,7 +12,6 @@
     @include respond(tab-port) {
         flex-direction: column-reverse;
         align-items: flex-start;
-        height: 80vh;
         width: 100vw;
     }
 
@@ -21,9 +20,8 @@
         justify-content: center;
         align-items: flex-start;
         height: 100%;
-        width: 50%;
-        padding-right: 6rem;
-        padding-left: 20rem;
+        width: 40%;
+        padding-left: 15rem;
 
         @include respond(desktop) {
             padding-left: 10rem;
@@ -37,7 +35,8 @@
             align-items: center;
             text-align: center;
             width: 100%;
-            height: 60%;
+            height: 50%;
+            padding-right: 8rem;
         }
 
         @include respond (phone) {
@@ -48,12 +47,11 @@
     &__img-box {
         position: relative;
         height: 100%;
-        width: 50%;
-        overflow: hidden;
+        width: 60%;
 
         @include respond (tab-port) {
             width: 100%;
-            height: 40%;
+            height: 60%;
         }
 
         @include respond (phone-min) {
@@ -63,17 +61,16 @@
 
     &__img-background {
         position: absolute;
-        top: -100px;
-        right: -110px;
-        width: 80rem;
+        top: -130px;
+        right: -190px;
+        width: 100rem;
 
         @include respond (desktop) {
-            width: 120%;
+            width: 85rem;
         }
 
         @include respond (tab-land) {
-            top: -40px;
-            right: -70px;
+            width: 75rem;
         }
 
         @include respond (tab-port) {
@@ -91,7 +88,7 @@
 
             @include respond (phone-min) {
                 display: block;
-                width: 100%;
+                width: 80rem;
             }
         }
     }
@@ -100,24 +97,26 @@
         position: absolute;
         top: -50px;
         right: -120px;
-        width: 50%;
+        width: 80rem;
+
+        @include respond (desktop) {
+            width: 70rem;
+        }
 
         @include respond (tab-land) {
-            top: 0;
+            width: 60rem;
         }
 
         @include respond (tab-port) {
-            top: 0;
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
+            width: 50rem;
         }
 
         @include respond (phone) {
-            top: -90px;
-        }
-
-        @include respond (phone-min) {
-            width: 90%;
+            top: -30px;
+            width: 60rem;
         }
     }
 }
