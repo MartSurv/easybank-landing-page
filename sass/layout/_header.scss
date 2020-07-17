@@ -12,7 +12,7 @@
     @include respond(tab-port) {
         flex-direction: column-reverse;
         align-items: flex-start;
-        width: 100vw;
+        width: 100%;
     }
 
     &__text-box {

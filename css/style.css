@@ -162,7 +162,7 @@ body {
     @media only screen and (max-width: 48em) {
       .footer__logo-box {
         justify-content: center;
-        width: 100%; } }
+        width: 30%; } }
     @media only screen and (max-width: 40em) {
       .footer__logo-box {
         width: 50%;
@@ -188,7 +188,8 @@ body {
     margin-left: 12rem; }
     @media only screen and (max-width: 48em) {
       .footer__nav {
-        width: 40%; } }
+        width: 35%;
+        margin-left: 6rem; } }
     @media only screen and (max-width: 40em) {
       .footer__nav {
         width: 50%;
@@ -300,7 +301,7 @@ body {
     .header {
       flex-direction: column-reverse;
       align-items: flex-start;
-      width: 100vw; } }
+      width: 100%; } }
   .header__text-box {
     display: flex;
     flex-direction: column;
