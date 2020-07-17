@@ -330,7 +330,8 @@ body {
   .header__img-box {
     position: relative;
     height: 100%;
-    width: 60%; }
+    width: 60%;
+    overflow: hidden; }
     @media only screen and (max-width: 48em) {
       .header__img-box {
         width: 100%;
@@ -348,7 +349,8 @@ body {
         width: 85rem; } }
     @media only screen and (max-width: 64em) {
       .header__img-background {
-        width: 75rem; } }
+        top: -50px;
+        width: 90rem; } }
     @media only screen and (max-width: 48em) {
       .header__img-background {
         top: -50px;
