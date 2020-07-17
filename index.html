@@ -15,11 +15,11 @@
 
 <body>
 
-  <div class="navigation">
+  <div class="navigation" id="navbar">
     <div class="navigation__logo-box">
       <a href="#"><img src="images/logo.svg" alt="Logo" class="navigation__logo"></a>
     </div>
-    <div class="navigation__nav">
+    <div class="navigation__nav" id="navigation">
       <ul class="navigation__list">
         <li class="navigation__item"><a href="#">Home</a></li>
         <li class="navigation__item"><a href="#features">About</a></li>
@@ -28,9 +28,14 @@
         <li class="navigation__item"><a href="#footer">Careers</a></li>
       </ul>
     </div>
-    <a href="#" class="btn">Request Invite</a>
-  </div>
 
+    <button class="hamburger hamburger--slider" type="button" id="hamburger" for="navi-toggle">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <a href="#" class="btn" id="btn--nav">Request Invite</a>
+  </div>
   <header class="header">
     <div class="header__text-box">
       <h1 class="heading-primary">Next generation digital banking</h1>
@@ -40,18 +45,18 @@
     </div>
     <div class="header__img-box">
       <img src="images/bg-intro-desktop.svg" alt="Intro background" class="header__img-background">
+      <img src="images/bg-intro-mobile.svg" alt="Intro background" class="header__img-background--mobile">
     </div>
     <img src="images/image-mockups.png" alt="Mockup" class="header__img-mockup">
   </header>
 
   <main>
-    <section class="section" id="features">
+    <section class="section section--features" id="features">
 
-      <div class="container">
-        <h2 class="heading-secondary">Why choose Easybank?</h2>
-        <p class="paragraph">We leverage Open Banking to turn your bank account into your financial hub. Control
-          your finances like never before.</p>
-      </div>
+      <h2 class="heading-secondary">Why choose Easybank?</h2>
+      <p class="paragraph" id="paragraph">We leverage Open Banking to turn your bank account into your financial hub.
+        Control
+        your finances like never before.</p>
 
       <div class="features row">
         <div class="features__feature">
@@ -78,20 +83,18 @@
           <p class="paragraph">Manage your savings, investments, pension, and much more from one account. Tracking
             your money has never been easier.</p>
         </div>
-      </div>
+
     </section>
 
-    <section class="section" id="articles">
+    <section class="section section--articles" id="articles">
 
-      <div class="container">
-        <h2 class="heading-secondary">Latest Articles</h2>
-      </div>
+      <h2 class="heading-secondary">Latest Articles</h2>
 
-      <div class="articles row">
+      <div class="row">
 
-        <div class="articles__article">
+        <div class="article">
           <figure>
-            <img src="images/image-currency.jpg" alt="Currency" class="articles__image">
+            <img src="images/image-currency.jpg" alt="Currency" class="article__image">
             <figcaption>By Claire Robinson</figcaption>
           </figure>
           <article>
@@ -102,9 +105,9 @@
           </article>
         </div>
 
-        <div class="articles__article">
+        <div class="article">
           <figure>
-            <img src="images/image-restaurant.jpg" alt="Restaurant" class="articles__image">
+            <img src="images/image-restaurant.jpg" alt="Restaurant" class="article__image">
             <figcaption>By Wilson Hutton</figcaption>
           </figure>
           <article>
@@ -115,9 +118,9 @@
           </article>
         </div>
 
-        <div class="articles__article">
+        <div class="article">
           <figure>
-            <img src="images/image-plane.jpg" alt="Plane" class="articles__image">
+            <img src="images/image-plane.jpg" alt="Plane" class="article__image">
             <figcaption>By Wilson Hutton</figcaption>
           </figure>
           <article>
@@ -128,9 +131,9 @@
           </article>
         </div>
 
-        <div class="articles__article">
+        <div class="article">
           <figure>
-            <img src="images/image-confetti.jpg" alt="Confetti" class="articles__image">
+            <img src="images/image-confetti.jpg" alt="Confetti" class="article__image">
             <figcaption>By Claire Robinson</figcaption>
           </figure>
           <article>
@@ -165,11 +168,11 @@
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <path fill="#FFF"
                   d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z" />
-                </svg></a>
+              </svg></a>
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
                 <path fill="#FFF"
                   d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z" />
-                </svg></a>
+              </svg></a>
           </div>
         </div>
         <div class="footer__nav">
@@ -196,6 +199,49 @@
       </div>
     </footer>
   </main>
+  <script type="application/javascript">
+    function handleClick() {
+      const state = document.getElementById('hamburger').classList.toggle('is-active');
+      const navigation = document.getElementById('navigation');
+      const navigationMobile = document.querySelector('.navigation__list');
+
+      function controlNav(state) {
+        if (state === true) {
+          navigation.classList.add('navigation__nav--mobile');
+          navigationMobile.classList.add('backInDown');
+          navigationMobile.classList.remove('backOutUp');
+
+          navigation.classList.add('fadeIn');
+        } else if (state === false) {
+          navigationMobile.classList.remove('backInDown');
+          navigationMobile.classList.add('backOutUp');
+
+          navigation.classList.remove('fadeIn');
+
+          setTimeout(() => navigation.classList.remove('navigation__nav--mobile'), 350);
+        }
+      }
+      controlNav(state);
+    }
+
+    document.getElementById('hamburger').addEventListener('click', handleClick);
+
+    const elementsArray = document.querySelectorAll('.navigation__item');
+    elementsArray.forEach(function (e) {
+      e.addEventListener('click', handleClick);
+    });
+
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
 </body>
 
 </html>

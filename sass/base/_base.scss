@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @include respond(desktop) {
     font-size: 60%;
@@ -11,11 +12,15 @@ html {
   }
 
   @include respond(tab-port) {
-    font-size: 42%;
+    font-size: 46%;
   }
 
   @include respond(phone) {
     font-size: 40%;
+  }
+
+  @include respond(phone-min) {
+    font-size: 35%;
   }
 }
 

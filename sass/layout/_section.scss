@@ -1,0 +1,30 @@
+.section {
+    @include flexCol;
+    align-items: flex-start;
+    background-color: $light-grayish-blue;
+    width: 100%;
+    padding: 12rem 18rem;
+
+    @include respond(desktop) {
+        padding: 8rem 14rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 6rem 12rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 4rem 10rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    &--articles h2 {
+        margin-bottom: 5rem;
+    }
+
+    &--features #paragraph {
+        margin-bottom: 5rem;
+        width: 60%;
+    }
+}

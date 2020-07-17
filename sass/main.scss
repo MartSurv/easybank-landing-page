@@ -1,29 +1,29 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/mixins';
+@import 'abstracts/animations',
+'abstracts/variables',
+'abstracts/mixins';
 
 // 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+@import 'base/base',
+'base/fonts',
+'base/typography',
+'base/helpers';
 
 // 4. Layout-related sections
-@import
-  'layout/footer',
-  'layout/grid',
-  'layout/header',
-  'layout/navigation';
+@import 'layout/footer',
+'layout/grid',
+'layout/header',
+'layout/navigation',
+'layout/section';
 
 // 5. Components
-@import
-  'components/button',
-  'components/headings';
+@import 'components/article',
+'components/button',
+'components/headings';
+
+@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers';
 
 // 6. Page-specific styles
-@import
-  'pages/home';
+@import 'pages/home';

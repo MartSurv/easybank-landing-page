@@ -18,11 +18,24 @@
         padding: 0 10rem;
     }
 
+    @include respond(phone) {
+        height: 400px;
+    }
+
+    @include respond(phone-min) {
+        padding: 0 5rem;
+    }
+
     &__container {
         @include flexRow;
         justify-content: start;
-        height: 100px;
         width: 100%;
+
+        @include respond(phone) {
+            @include flexCol;
+            height: 350px;
+            justify-content: space-between;
+        }
     }
 
     &__logo-box {
@@ -30,6 +43,20 @@
         align-items: flex-start;
         height: 100%;
         width: 15%;
+
+        @include respond (tab-land) {
+            width: 20%;
+        }
+
+        @include respond (tab-port) {
+            justify-content: center;
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            width: 50%;
+            align-items: center;
+        }
     }
 
     &__icons {
@@ -39,6 +66,10 @@
         & a:hover path {
             fill: $lime-green;
         }
+
+        @include respond (tab-port) {
+            margin-top: 3rem;
+        }
     }
 
     &__nav {
@@ -46,12 +77,33 @@
         height: 100%;
         width: 30%;
         margin-left: 12rem;
+
+        @include respond(tab-port) {
+            width: 40%;
+        }
+
+        @include respond(phone) {
+            width: 50%;
+            margin-left: 0;
+            text-align: center;
+            align-items: center;
+        }
+
+        @include respond(phone-min) {
+            @include flexCol;
+        }
     }
 
     &__list {
         list-style: none;
         font-size: 1.6rem;
         line-height: 2;
+
+        @include respond(phone-min) {
+            font-size: 2rem;
+            line-height: 2.5;
+            margin-bottom: 1rem;
+        }
 
         & a,
         a:link,
@@ -77,6 +129,13 @@
             font-size: 1.6rem;
             margin: 2rem 0;
         }
+
+        @include respond(phone) {
+            width: 50%;
+            margin-left: 0;
+            text-align: center;
+            align-items: center;
+        }
     }
 }
 
@@ -87,6 +146,15 @@
     transform: translateX(50%);
     font-size: 1.2rem;
     color: $grayish-blue;
+    text-align: center;
+
+    @include respond(phone) {
+        bottom: 45px;
+    }
+
+    @include respond(phone-min) {
+        bottom: 20px;
+    }
 
     & a,
     a:link,

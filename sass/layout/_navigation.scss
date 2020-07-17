@@ -9,21 +9,62 @@
     padding-left: 20rem;
     padding-right: 15rem;
     z-index: 10;
+    transition: top .5s;
 
     @include respond(desktop) {
         padding-left: 10rem;
         padding-right: 10rem;
     }
 
+    @include respond(tab-port) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
     &__logo-box {
         display: inline-block;
     }
 
-    &__logo {}
+    // &__logo {}
 
     &__nav {
         @include flexRow;
         height: 100%;
+
+        @include respond(phone) {
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        }
+
+        &--mobile {
+            visibility: visible;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            height: 100%;
+            width: 100vw;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.3) 100%);
+
+            & .navigation__list {
+                @include flexCol;
+                align-items: center;
+                position: fixed;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 220px;
+                width: 80vw;
+                border-radius: 5px;
+                padding: 3rem 0;
+                background-color: $very-light-gray;
+            }
+
+            & .navigation__item {
+                line-height: normal;
+                font-size: 2.5rem;
+            }
+        }
     }
 
     &__list {
@@ -43,6 +84,11 @@
             text-decoration: none;
             color: $grayish-blue;
             line-height: 80px;
+
+            @include respond(phone) {
+                line-height: 5rem;
+                color: $dark-blue;
+            }
 
             &::after {
                 content: '';
@@ -66,6 +112,25 @@
 
         &:not(:first-of-type) {
             margin-left: 2.5rem;
+
+            @include respond(phone) {
+                margin-left: 0;
+            }
         }
+    }
+}
+
+#hamburger {
+    display: none;
+
+    @include respond(phone) {
+        display: inline-block;
+    }
+}
+
+#btn--nav {
+
+    @include respond(phone) {
+        display: none;
     }
 }
