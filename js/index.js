@@ -1,7 +1,6 @@
 const navigation = document.getElementById('navigation').classList;
 const navigationMobile = document.querySelector('.navigation__list').classList;
 const hamburger = document.getElementById('hamburger').classList;
-const elementsArray = document.querySelectorAll('.navigation__item');
 
 function handleClick() {
   const state = hamburger.toggle('is-active');
@@ -25,16 +24,28 @@ function handleClick() {
 
 }
 
-document.getElementById('hamburger').addEventListener('click', handleClick);
+function handleNavigation() {
 
-window.addEventListener('resize', function () {
+  const elementsArray = document.querySelectorAll('.navigation__item');
+
   if (window.innerWidth > 640) {
+
     navigation.remove('navigation__nav--mobile', 'fadeIn');
     navigationMobile.remove('backInDown');
     hamburger.remove('is-active');
-  } else {
+    elementsArray.forEach(function (e) {
+      e.removeEventListener('click', handleClick);
+    });
+
+  } else if (window.innerWidth < 640) {
+
     elementsArray.forEach(function (e) {
       e.addEventListener('click', handleClick);
     });
+
   };
-});
+}
+
+document.getElementById('hamburger').addEventListener('click', handleClick);
+window.addEventListener('load', handleNavigation);
+window.addEventListener('resize', handleNavigation);
