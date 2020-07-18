@@ -11,7 +11,7 @@ function handleClick() {
       navigationMobile.add('backInDown');
       navigationMobile.remove('backOutUp');
 
-      navigation.classList.add('fadeIn');
+      navigation.add('fadeIn');
     } else if (state === false) {
       navigationMobile.remove('backInDown');
       navigationMobile.add('backOutUp');
@@ -30,17 +30,6 @@ const elementsArray = document.querySelectorAll('.navigation__item');
 elementsArray.forEach(function (e) {
   e.addEventListener('click', handleClick);
 });
-
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollPos;
-}
 
 window.addEventListener('resize', function () {
   if (window.innerWidth > 640) {
