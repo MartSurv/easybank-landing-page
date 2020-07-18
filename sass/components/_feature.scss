@@ -1,0 +1,13 @@
+.feature {
+    @include flexCol;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include respond(tab-port) {
+        align-items: center;
+    }
+
+    &__icon {
+        margin-bottom: 4rem;
+    }
+}

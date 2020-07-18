@@ -19,11 +19,13 @@
     }
 
     @include respond(phone) {
-        height: 400px;
+        padding: 0 8rem;
+        height: 350px;
     }
 
     @include respond(phone-min) {
-        padding: 0 5rem;
+        padding: 0 4rem;
+        height: 500px;
     }
 
     &__container {
@@ -33,8 +35,11 @@
 
         @include respond(phone) {
             @include flexCol;
-            height: 350px;
             justify-content: space-between;
+        }
+
+        @include respond(phone-min) {
+            height: auto;
         }
     }
 
@@ -88,6 +93,7 @@
             margin-left: 0;
             text-align: center;
             align-items: center;
+            margin: 2rem 0;
         }
 
         @include respond(phone-min) {
@@ -148,14 +154,6 @@
     font-size: 1.2rem;
     color: $grayish-blue;
     text-align: center;
-
-    @include respond(phone) {
-        bottom: 45px;
-    }
-
-    @include respond(phone-min) {
-        bottom: 20px;
-    }
 
     & a,
     a:link,

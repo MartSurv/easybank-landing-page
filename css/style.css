@@ -75,16 +75,16 @@ html {
       font-size: 60%; } }
   @media only screen and (max-width: 64em) {
     html {
-      font-size: 50%; } }
+      font-size: 55%; } }
   @media only screen and (max-width: 48em) {
     html {
-      font-size: 46%; } }
+      font-size: 40%; } }
   @media only screen and (max-width: 40em) {
     html {
-      font-size: 40%; } }
+      font-size: 45%; } }
   @media only screen and (max-width: 25em) {
     html {
-      font-size: 35%; } }
+      font-size: 40%; } }
 
 *,
 *::before,
@@ -129,10 +129,12 @@ body {
       padding: 0 10rem; } }
   @media only screen and (max-width: 40em) {
     .footer {
-      height: 400px; } }
+      padding: 0 8rem;
+      height: 350px; } }
   @media only screen and (max-width: 25em) {
     .footer {
-      padding: 0 5rem; } }
+      padding: 0 4rem;
+      height: 500px; } }
   .footer__container {
     display: flex;
     flex-direction: row;
@@ -146,8 +148,10 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 350px;
         justify-content: space-between; } }
+    @media only screen and (max-width: 25em) {
+      .footer__container {
+        height: auto; } }
   .footer__logo-box {
     display: flex;
     flex-direction: column;
@@ -195,7 +199,8 @@ body {
         width: 50%;
         margin-left: 0;
         text-align: center;
-        align-items: center; } }
+        align-items: center;
+        margin: 2rem 0; } }
     @media only screen and (max-width: 25em) {
       .footer__nav {
         display: flex;
@@ -253,12 +258,6 @@ body {
   font-size: 1.2rem;
   color: #9698a6;
   text-align: center; }
-  @media only screen and (max-width: 40em) {
-    .attribution {
-      bottom: 45px; } }
-  @media only screen and (max-width: 25em) {
-    .attribution {
-      bottom: 20px; } }
   .attribution a,
   .attribution a:link,
   .attribution a:visited {
@@ -323,11 +322,10 @@ body {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 50%;
-        padding-right: 8rem; } }
+        height: 50%; } }
     @media only screen and (max-width: 40em) {
       .header__text-box {
-        height: 50%; } }
+        padding: 0 4rem; } }
   .header__img-box {
     position: relative;
     height: 100%;
@@ -336,10 +334,7 @@ body {
     @media only screen and (max-width: 48em) {
       .header__img-box {
         width: 100%;
-        height: 60%; } }
-    @media only screen and (max-width: 25em) {
-      .header__img-box {
-        height: 60%; } }
+        height: 50%; } }
   .header__img-background {
     position: absolute;
     top: -130px;
@@ -405,12 +400,13 @@ body {
   transition: top .5s; }
   @media only screen and (max-width: 81.25em) {
     .navigation {
-      padding-left: 10rem;
-      padding-right: 10rem; } }
+      padding: 0 10rem; } }
+  @media only screen and (max-width: 64em) {
+    .navigation {
+      padding: 0 8rem; } }
   @media only screen and (max-width: 48em) {
     .navigation {
-      padding-left: 6rem;
-      padding-right: 6rem; } }
+      padding: 0 6rem; } }
   .navigation__logo-box {
     display: inline-block; }
   .navigation__nav {
@@ -442,7 +438,7 @@ body {
         top: 100px;
         left: 50%;
         transform: translateX(-50%);
-        height: 220px;
+        height: 300px;
         width: 80vw;
         border-radius: 5px;
         padding: 3rem 0;
@@ -512,23 +508,28 @@ body {
   align-items: flex-start;
   background-color: #f3f4f6;
   width: 100%;
-  padding: 12rem 18rem; }
+  padding: 12rem 12rem; }
   @media only screen and (max-width: 81.25em) {
     .section {
-      padding: 8rem 14rem; } }
+      padding: 8rem 10rem; } }
   @media only screen and (max-width: 64em) {
     .section {
-      padding: 6rem 12rem; } }
+      padding: 6rem 8rem; } }
   @media only screen and (max-width: 48em) {
     .section {
-      padding: 4rem 10rem;
+      padding: 4rem 6rem;
+      text-align: center;
+      align-items: center; } }
+  @media only screen and (max-width: 40em) {
+    .section {
+      padding: 4rem 4rem;
       text-align: center;
       align-items: center; } }
   .section--articles h2 {
     margin-bottom: 5rem; }
   .section--features #paragraph {
     margin-bottom: 5rem;
-    width: 60%; }
+    width: 90%; }
 
 .article {
   display: flex;
@@ -552,6 +553,9 @@ body {
   .article figure figcaption {
     color: #9698a6;
     margin-left: 3rem; }
+    @media only screen and (max-width: 48em) {
+      .article figure figcaption {
+        margin-left: 0; } }
   .article article {
     height: 100%;
     padding: 2rem 3rem;
@@ -572,6 +576,19 @@ body {
     .btn:hover, .btn:link:hover, .btn:visited:hover {
       opacity: .6; }
 
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  @media only screen and (max-width: 48em) {
+    .feature {
+      align-items: center; } }
+  .feature__icon {
+    margin-bottom: 4rem; }
+
 .heading-primary {
   color: #2d314d;
   font-size: 5.2rem;
@@ -586,14 +603,14 @@ body {
 
 .heading-tertiary {
   color: #2d314d;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 300;
   margin-bottom: 2rem; }
 
 .heading-quaternary {
   display: inline-block;
   color: #2d314d;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 2rem;
   -webkit-backface-visibility: hidden;
@@ -611,9 +628,10 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  font-size: 1.8rem; }
   .paragraph--features {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 0; }
 
 .hamburger {
@@ -688,17 +706,3 @@ body {
     opacity: 0; }
   .hamburger--slider.is-active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-90deg); }
-
-.features__feature {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: flex-start;
-  align-items: flex-start; }
-  @media only screen and (max-width: 48em) {
-    .features__feature {
-      align-items: center; } }
-
-.features__icon {
-  margin-bottom: 4rem; }

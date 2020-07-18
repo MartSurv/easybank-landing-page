@@ -8,19 +8,19 @@ html {
   }
 
   @include respond(tab-land) {
-    font-size: 50%;
+    font-size: 55%;
   }
 
   @include respond(tab-port) {
-    font-size: 46%;
-  }
-
-  @include respond(phone) {
     font-size: 40%;
   }
 
+  @include respond(phone) {
+    font-size: 45%;
+  }
+
   @include respond(phone-min) {
-    font-size: 35%;
+    font-size: 40%;
   }
 }
 

@@ -7,7 +7,6 @@
 
 // 3. Base stuff
 @import 'base/base',
-'base/fonts',
 'base/typography',
 'base/helpers';
 
@@ -21,6 +20,7 @@
 // 5. Components
 @import 'components/article',
 'components/button',
+'components/feature',
 'components/headings';
 
 @import '../node_modules/hamburgers/_sass/hamburgers/hamburgers';

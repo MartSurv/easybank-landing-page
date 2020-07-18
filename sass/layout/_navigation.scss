@@ -12,13 +12,15 @@
     transition: top .5s;
 
     @include respond(desktop) {
-        padding-left: 10rem;
-        padding-right: 10rem;
+        padding: 0 10rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 0 8rem;
     }
 
     @include respond(tab-port) {
-        padding-left: 6rem;
-        padding-right: 6rem;
+        padding: 0 6rem;
     }
 
     &__logo-box {
@@ -46,6 +48,7 @@
             width: 100vw;
             background-image: linear-gradient(180deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.3) 100%);
 
+
             & .navigation__list {
                 @include flexCol;
                 align-items: center;
@@ -53,7 +56,7 @@
                 top: 100px;
                 left: 50%;
                 transform: translateX(-50%);
-                height: 220px;
+                height: 300px;
                 width: 80vw;
                 border-radius: 5px;
                 padding: 3rem 0;

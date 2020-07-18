@@ -22,6 +22,10 @@
         & figcaption {
             color: $grayish-blue;
             margin-left: 3rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
         }
     }
 
