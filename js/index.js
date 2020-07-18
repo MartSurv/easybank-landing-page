@@ -1,6 +1,7 @@
 const navigation = document.getElementById('navigation').classList;
 const navigationMobile = document.querySelector('.navigation__list').classList;
 const hamburger = document.getElementById('hamburger').classList;
+const elementsArray = document.querySelectorAll('.navigation__item');
 
 function handleClick() {
   const state = hamburger.toggle('is-active');
@@ -26,15 +27,14 @@ function handleClick() {
 
 document.getElementById('hamburger').addEventListener('click', handleClick);
 
-const elementsArray = document.querySelectorAll('.navigation__item');
-elementsArray.forEach(function (e) {
-  e.addEventListener('click', handleClick);
-});
-
 window.addEventListener('resize', function () {
   if (window.innerWidth > 640) {
     navigation.remove('navigation__nav--mobile', 'fadeIn');
     navigationMobile.remove('backInDown');
     hamburger.remove('is-active');
+  } else {
+    elementsArray.forEach(function (e) {
+      e.addEventListener('click', handleClick);
+    });
   };
 });
